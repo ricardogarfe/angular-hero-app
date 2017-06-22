@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - "7"
+
+cache:
+  directories:
+  - node_modules
+
+install:
+  - npm i --silent --no-optional -g @angular/cli
+  - npm i --silent --no-optional -g angular-cli-ghpages
+  - npm install
+
+before_script:
+  - ng build --prod --base-href "https://ricardogarfe.github.io/angular-hero-app/"
+
+script:
+  angular-cli-ghpages --repo=https://GH_TOKEN@github.com/ricardogarfe/angular-hero-app.git --branch gh-pages --name="Ricardo García Fernández" --email=ricardogarfe@gmail.com
+
