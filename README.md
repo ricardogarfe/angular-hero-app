@@ -12,7 +12,7 @@ This dependecy *deploys your dist directory into gh-pages branch*, that's the ma
 
 You can automate deployment using travis-ci
 
-'''yml
+```yml
 language: node_js
 
 node_js:
@@ -32,5 +32,6 @@ before_script:
 
 script:
   angular-cli-ghpages --repo=https://GH_TOKEN@github.com/ricardogarfe/angular-hero-app.git --branch gh-pages --name="Ricardo García Fernández" --email=ricardogarfe@gmail.com
-'''
+```
+
 
